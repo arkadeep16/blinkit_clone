@@ -1,0 +1,340 @@
+/* UTILITIES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Primary Color */
+:root {
+  --primary-color: #f94a3d; /* 3c31dd Change this color to set your primary color */
+  --bg-color: #1b1b1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: capitalize;
+  font-family: 'Poppins';
+}
+body {
+  background-color: #1b1b1e;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+hr {
+  color: #c0c5c9;
+}
+.container {
+  max-width: 1200px; /* Adjust the maximum width as per your design */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add some padding for spacing within the container */
+  box-sizing: border-box; /* Include padding and borders within the width */
+}
+section {
+  padding: 60px 0;
+}
+.title {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+.title-span {
+  color: var(--primary-color);
+}
+.text-center {
+  text-align: center;
+}
+
+.card {
+  width: 200px;
+  position: relative;
+  padding: 20px; /* Add padding to the card content */
+
+  /* Border properties */
+  border: 3px solid transparent; /* Set a transparent solid border */
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(143, 141, 150, 0) 50%,
+    #2f2b3a 100%
+  );
+  border-image-slice: 1; /* Ensures the entire gradient is used as the border */
+  border-image-repeat: stretch; /* Stretch the gradient to fit the border */
+
+  /* Border radius */
+  border-bottom-left-radius: 20px; /* Add a border radius of 20px */
+  color: #fff;
+  line-height: 1.2;
+}
+.card-active {
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(255, 207, 3, 0) 50%,
+    #ffcf03 100%
+  );
+}
+
+.btn {
+  width: 50%;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px var(--primary-color) solid;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+/* Backgrounds & colored buttons */
+.bg-primary,
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: var(--bg-color);
+  border: none;
+  color: white;
+  padding: 15px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.bg-light,
+.btn-light {
+  background-color: var(--light-color);
+  color: #333;
+}
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+  color: #fff;
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+/* Text sizes */
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+.d-flex {
+  display: flex;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Margin */
+.my-1 {
+  margin: 0.8rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.mx-2 {
+  margin: 0 1.5rem;
+}
+
+.mx-3 {
+  margin: 0 2rem;
+}
+
+.mx-4 {
+  margin: 0 3rem;
+}
+
+.mx-5 {
+  margin: 0 4rem;
+}
+
+/* Padding */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+.px-1 {
+  margin: 0 1rem;
+}
+
+.px-2 {
+  margin: 0 1.5rem;
+}
+
+.px-3 {
+  margin: 0 2rem;
+}
+
+.px-4 {
+  margin: 0 3rem;
+}
+
+.px-5 {
+  margin: 0 4rem;
+}
+/* UTILITIES END */
