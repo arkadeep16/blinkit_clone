@@ -15,6 +15,15 @@
   box-sizing: border-box;
   text-transform: capitalize !important;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 !important;
+}
 body {
   font-family: 'poppins', sans-serif !important;
 }
@@ -67,29 +76,57 @@ nav {
 .cart-btn i {
   font-size: 20px;
 }
-/* category-1 */
-#category-1 {
-  padding-right: 1.5vw;
+/* main container */
+main {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
 }
-/* scroll-container */
-#scroll-container {
-  width: 80vw;
-  margin: auto;
+.main-container {
+  max-width: 1280px;
 }
+#hero,
+#hero img {
+  width: 100%;
+}
+.scroll-container {
+  margin: 0 16px;
+  display: flex;
+  overflow: auto scroll;
+  margin-right: 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+
+  border-radius: 12px;
+}
+.scroll-container img {
+  margin-right: 10px;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
 .list {
   white-space: nowrap;
   overflow-x: scroll;
 }
-#scroll-container .list > img {
-  display: inline-block;
-  margin-right: 10px;
-}
+
 .list::-webkit-scrollbar {
   display: none;
 }
+/* category-1 */
+#category-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-wrap {
+  width: 128px;
+}
+.image-wrap img {
+  width: 100%;
+}
+
 /* cards-1 */
 #cards-1 {
   width: 80vw;
